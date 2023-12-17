@@ -6,24 +6,24 @@ variables:
   domain_name: josephvoss.com
 outputs: {}
 resources:
-  www:
+  www.josephvoss.com:
     type: cloudflare:Record
     properties:
-      name: www.${domain_name}
-      zoneId: ${cloudflare_zone_id}
-      type: CNAME
-      ttl: 3600
-      value: ${domain_name}
+      name: www
       proxied: true
-  cf_pages_cname:
+      ttl: 1
+      type: CNAME
+      value: ${domain_name}
+      zoneId: ${cloudflare_zone_id}
+  josephvoss.com:
     type: cloudflare:Record
     properties:
       name: ${domain_name}
-      zoneId: ${cloudflare_zone_id}
-      type: CNAME
-      ttl: 1
-      value: website-source-ads.pages.dev
       proxied: true
+      ttl: 1
+      type: CNAME
+      value: website-source-ads.pages.dev
+      zoneId: ${cloudflare_zone_id}
   fastmail_mx_2:
     type: cloudflare:Record
     properties:
@@ -44,77 +44,69 @@ resources:
       type: "MX"
       value: "in1-smtp.messagingengine.com"
       zoneId: ${cloudflare_zone_id}
-  fastmail_dkims_1:
+  fm1._domainkey.josephvoss.com:
     type: cloudflare:Record
     properties:
-      name: "fm1._domainkey"
-      proxied: true
+      name: fm1._domainkey
       ttl: 1
-      type: "CNAME"
-      value: "fm1.josephvoss.com.dkim.fmhosted.com"
+      type: CNAME
+      value: fm1.josephvoss.com.dkim.fmhosted.com
       zoneId: ${cloudflare_zone_id}
-  fastmail_dkims_2:
+  fm2._domainkey.josephvoss.com:
     type: cloudflare:Record
     properties:
-      name: "fm2._domainkey"
-      proxied: true
+      name: fm2._domainkey
       ttl: 1
-      type: "CNAME"
-      value: "fm2.josephvoss.com.dkim.fmhosted.com"
+      type: CNAME
+      value: fm2.josephvoss.com.dkim.fmhosted.com
       zoneId: ${cloudflare_zone_id}
-  fastmail_dkims_3:
+  fm3._domainkey.josephvoss.com:
     type: cloudflare:Record
     properties:
-      name: "fm3._domainkey"
-      proxied: true
+      name: fm3._domainkey
       ttl: 1
-      type: "CNAME"
-      value: "fm3.josephvoss.com.dkim.fmhosted.com"
+      type: CNAME
+      value: fm3.josephvoss.com.dkim.fmhosted.com
       zoneId: ${cloudflare_zone_id}
-  _acme_challenge_1:
+  _acme-challenge.josephvoss.com:
     type: cloudflare:Record
     properties:
-      name: "_acme-challenge"
-      proxied: false
+      name: _acme-challenge
       ttl: 600
-      type: "TXT"
-      value: "lhF_w0qlcmnmyOlfegknvZ_k7aTn3w9oZOd5Jj7O4X8"
+      type: TXT
+      value: lhF_w0qlcmnmyOlfegknvZ_k7aTn3w9oZOd5Jj7O4X8
       zoneId: ${cloudflare_zone_id}
-  _acme_challenge_2:
+  _acme-challenge.josephvoss.com_1:
     type: cloudflare:Record
     properties:
-      name: "_acme-challenge"
-      proxied: false
+      name: _acme-challenge
       ttl: 600
-      type: "TXT"
-      value: "kIOq8tcuEDrT1_T30bDopWNZ_DZZKsO3GQhv-4P3_6k"
+      type: TXT
+      value: kIOq8tcuEDrT1_T30bDopWNZ_DZZKsO3GQhv-4P3_6k
       zoneId: ${cloudflare_zone_id}
-  _acme_challenge_3:
+  _acme-challenge.josephvoss.com_2:
     type: cloudflare:Record
     properties:
-      name: "_acme-challenge"
-      proxied: false
+      name: _acme-challenge
       ttl: 600
-      type: "TXT"
-      value: "gzv-noqThKdyKwkq1mXzUjAE1-qiuggxZcUxLF1I8fw"
+      type: TXT
+      value: gzv-noqThKdyKwkq1mXzUjAE1-qiuggxZcUxLF1I8fw
       zoneId: ${cloudflare_zone_id}
-  _acme_challenge_4:
+  _acme-challenge.josephvoss.com_3:
     type: cloudflare:Record
     properties:
-      name: "_acme-challenge"
-      proxied: false
+      name: _acme-challenge
       ttl: 600
-      type: "TXT"
-      value: "glnApuyf9U1Vf51jP3bLf9Ywbu1dwJ_8fNasu1C-zqA"
+      type: TXT
+      value: glnApuyf9U1Vf51jP3bLf9Ywbu1dwJ_8fNasu1C-zqA
       zoneId: ${cloudflare_zone_id}
-  _acme_challenge_5:
+  _acme-challenge.josephvoss.com_4:
     type: cloudflare:Record
     properties:
-      name: "_acme-challenge"
-      proxied: false
+      name: _acme-challenge
       ttl: 600
-      type: "TXT"
-      value: "7bel3iXiWrg8ZQc_9flzphlidhfu1qSemk95FeCWwKI"
+      type: TXT
+      value: 7bel3iXiWrg8ZQc_9flzphlidhfu1qSemk95FeCWwKI
       zoneId: ${cloudflare_zone_id}
   google_site_verification:
     type: cloudflare:Record

@@ -1,0 +1,25 @@
+name: Pulumi
+on:
+  push:
+    branches:
+      - main
+jobs:
+  update:
+    name: Update
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pulumi/actions@v3
+        with:
+          command: up
+          stack-name: production
+          cloud-url: file://state
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Update pulumi state dir
+          file_pattern: state/*
