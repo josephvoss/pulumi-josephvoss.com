@@ -1,0 +1,22 @@
+name: Pulumi
+on:
+  - pull_request
+permissions:
+  pull-requests: write
+  contents: read
+jobs:
+  preview:
+    name: Preview
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pulumi/actions@v4
+        with:
+          command: preview
+          stack-name: production
+          comment-on-pr: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          cloud-url: file://
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          PULUMI_CONFIG_PASSPHRASE: ${{ secrets.PULUMI_CONFIG_PASSPHRASE }}
