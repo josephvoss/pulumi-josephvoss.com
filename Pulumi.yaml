@@ -22,7 +22,7 @@ resources:
       proxied: true
       ttl: 1
       type: CNAME
-      value: website-source-ads.pages.dev
+      value: example.com
       zoneId: ${cloudflare_zone_id}
   fastmail_mx_2:
     type: cloudflare:Record
