@@ -1,0 +1,33 @@
+{
+    "kind": "update",
+    "startTime": 1702841899,
+    "message": "Add pulumi project file and domain config",
+    "environment": {
+        "exec.kind": "cli",
+        "git.author": "Joseph Voss",
+        "git.author.email": "jvoss@josephvoss.com",
+        "git.committer": "Joseph Voss",
+        "git.committer.email": "jvoss@josephvoss.com",
+        "git.dirty": "true",
+        "git.head": "dea77262b3a418e2a702b76ee87e5cdfe78635a3",
+        "git.headName": "refs/heads/main",
+        "pulumi.arch": "amd64",
+        "pulumi.env.PULUMI_CONFIG_PASSPHRASE": "set",
+        "pulumi.flag.target": "set",
+        "pulumi.os": "darwin",
+        "pulumi.version": "v3.97.0",
+        "updatePlan": "false",
+        "vcs.kind": "github.com",
+        "vcs.owner": "josephvoss",
+        "vcs.repo": "pulumi-josephvoss.com",
+        "vcs.root": "."
+    },
+    "config": {},
+    "version": 0,
+    "result": "succeeded",
+    "endTime": 1702841900,
+    "resourceChanges": {
+        "delete": 4,
+        "same": 15
+    }
+}

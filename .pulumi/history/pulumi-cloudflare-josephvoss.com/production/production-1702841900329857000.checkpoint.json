@@ -1,0 +1,564 @@
+{
+    "version": 3,
+    "checkpoint": {
+        "stack": "organization/pulumi-cloudflare-josephvoss.com/production",
+        "latest": {
+            "manifest": {
+                "time": "2023-12-17T13:38:20.318892-06:00",
+                "magic": "1df77b5e5a55aabdaec4cc866a9f4b54d15b575d9f6adb0aa2bb1534d428604e",
+                "version": "v3.97.0"
+            },
+            "secrets_providers": {
+                "type": "passphrase",
+                "state": {
+                    "salt": "v1:5013t38cBJs=:v1:Iz+ljRV0QpQ4B/V3:3SYL+LUsKGTSHjXYpEokM4QbJVRYhg=="
+                }
+            },
+            "resources": [
+                {
+                    "urn": "urn:pulumi:production::pulumi-cloudflare-josephvoss.com::pulumi:pulumi:Stack::pulumi-cloudflare-josephvoss.com-production",
+                    "custom": false,
+                    "type": "pulumi:pulumi:Stack",
+                    "created": "2023-12-17T19:23:04.493213Z",
+                    "modified": "2023-12-17T19:23:04.493213Z"
+                },
+                {
+                    "urn": "urn:pulumi:production::pulumi-cloudflare-josephvoss.com::pulumi:providers:cloudflare::default",
+                    "custom": true,
+                    "id": "71243eb7-ce05-4ebd-91b4-d0ad68bfe6e8",
+                    "type": "pulumi:providers:cloudflare",
+                    "inputs": {
+                        "apiClientLogging": "false",
+                        "maxBackoff": "30",
+                        "minBackoff": "1",
+                        "retries": "3",
+                        "rps": "4"
+                    },
+                    "outputs": {
+                        "apiClientLogging": "false",
+                        "maxBackoff": "30",
+                        "minBackoff": "1",
+                        "retries": "3",
+                        "rps": "4"
+                    },
+                    "created": "2023-12-17T19:23:04.636519Z",
+                    "modified": "2023-12-17T19:23:04.636519Z"
+                },
+                {
+                    "urn": "urn:pulumi:production::pulumi-cloudflare-josephvoss.com::cloudflare:index/record:Record::josephvoss.com",
+                    "custom": true,
+                    "id": "2129a0712f0e0df551093268a8fda05f",
+                    "type": "cloudflare:index/record:Record",
+                    "inputs": {
+                        "__defaults": [
+                            "allowOverwrite"
+                        ],
+                        "allowOverwrite": false,
+                        "name": "josephvoss.com",
+                        "proxied": true,
+                        "ttl": 1,
+                        "type": "CNAME",
+                        "value": "website-source-ads.pages.dev",
+                        "zoneId": "1dee01b2352a5b47fa244f4ac91beb3c"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":30000000000,\"update\":30000000000},\"schema_version\":\"2\"}",
+                        "comment": "",
+                        "createdOn": "2021-11-25T18:20:18.298206Z",
+                        "data": null,
+                        "hostname": "josephvoss.com",
+                        "id": "2129a0712f0e0df551093268a8fda05f",
+                        "metadata": {
+                            "auto_added": "false",
+                            "managed_by_apps": "false",
+                            "managed_by_argo_tunnel": "false",
+                            "source": "primary"
+                        },
+                        "modifiedOn": "2021-11-25T18:20:18.298206Z",
+                        "name": "josephvoss.com",
+                        "proxiable": true,
+                        "proxied": true,
+                        "tags": [],
+                        "ttl": 1,
+                        "type": "CNAME",
+                        "value": "website-source-ads.pages.dev",
+                        "zoneId": "1dee01b2352a5b47fa244f4ac91beb3c"
+                    },
+                    "parent": "urn:pulumi:production::pulumi-cloudflare-josephvoss.com::pulumi:pulumi:Stack::pulumi-cloudflare-josephvoss.com-production",
+                    "provider": "urn:pulumi:production::pulumi-cloudflare-josephvoss.com::pulumi:providers:cloudflare::default::71243eb7-ce05-4ebd-91b4-d0ad68bfe6e8",
+                    "propertyDependencies": {
+                        "name": null,
+                        "proxied": null,
+                        "ttl": null,
+                        "type": null,
+                        "value": null,
+                        "zoneId": null
+                    },
+                    "created": "2023-12-17T19:23:12.406532Z",
+                    "modified": "2023-12-17T19:23:12.406532Z"
+                },
+                {
+                    "urn": "urn:pulumi:production::pulumi-cloudflare-josephvoss.com::cloudflare:index/record:Record::www.josephvoss.com",
+                    "custom": true,
+                    "id": "44224e32e5475e5a53dc917859e13612",
+                    "type": "cloudflare:index/record:Record",
+                    "inputs": {
+                        "__defaults": [
+                            "allowOverwrite"
+                        ],
+                        "allowOverwrite": false,
+                        "name": "www",
+                        "proxied": true,
+                        "ttl": 1,
+                        "type": "CNAME",
+                        "value": "josephvoss.com",
+                        "zoneId": "1dee01b2352a5b47fa244f4ac91beb3c"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":30000000000,\"update\":30000000000},\"schema_version\":\"2\"}",
+                        "comment": "",
+                        "createdOn": "2020-09-08T18:41:06.255548Z",
+                        "data": null,
+                        "hostname": "www.josephvoss.com",
+                        "id": "44224e32e5475e5a53dc917859e13612",
+                        "metadata": {
+                            "auto_added": "false",
+                            "managed_by_apps": "false",
+                            "managed_by_argo_tunnel": "false",
+                            "source": "primary"
+                        },
+                        "modifiedOn": "2021-11-25T18:22:08.586118Z",
+                        "name": "www",
+                        "proxiable": true,
+                        "proxied": true,
+                        "tags": [],
+                        "ttl": 1,
+                        "type": "CNAME",
+                        "value": "josephvoss.com",
+                        "zoneId": "1dee01b2352a5b47fa244f4ac91beb3c"
+                    },
+                    "parent": "urn:pulumi:production::pulumi-cloudflare-josephvoss.com::pulumi:pulumi:Stack::pulumi-cloudflare-josephvoss.com-production",
+                    "provider": "urn:pulumi:production::pulumi-cloudflare-josephvoss.com::pulumi:providers:cloudflare::default::71243eb7-ce05-4ebd-91b4-d0ad68bfe6e8",
+                    "propertyDependencies": {
+                        "name": null,
+                        "proxied": null,
+                        "ttl": null,
+                        "type": null,
+                        "value": null,
+                        "zoneId": null
+                    },
+                    "created": "2023-12-17T19:23:12.823484Z",
+                    "modified": "2023-12-17T19:23:12.823484Z"
+                },
+                {
+                    "urn": "urn:pulumi:production::pulumi-cloudflare-josephvoss.com::cloudflare:index/record:Record::fm3._domainkey.josephvoss.com",
+                    "custom": true,
+                    "id": "e963035b33d86b3c73daafb4daef4bd7",
+                    "type": "cloudflare:index/record:Record",
+                    "inputs": {
+                        "__defaults": [
+                            "allowOverwrite"
+                        ],
+                        "allowOverwrite": false,
+                        "name": "fm3._domainkey",
+                        "ttl": 1,
+                        "type": "CNAME",
+                        "value": "fm3.josephvoss.com.dkim.fmhosted.com",
+                        "zoneId": "1dee01b2352a5b47fa244f4ac91beb3c"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":30000000000,\"update\":30000000000},\"schema_version\":\"2\"}",
+                        "comment": "",
+                        "createdOn": "2023-02-02T08:02:57.685117Z",
+                        "data": null,
+                        "hostname": "fm3._domainkey.josephvoss.com",
+                        "id": "e963035b33d86b3c73daafb4daef4bd7",
+                        "metadata": {
+                            "auto_added": "false",
+                            "managed_by_apps": "false",
+                            "managed_by_argo_tunnel": "false",
+                            "source": "primary"
+                        },
+                        "modifiedOn": "2023-02-02T08:02:57.685117Z",
+                        "name": "fm3._domainkey",
+                        "proxiable": true,
+                        "proxied": false,
+                        "tags": [],
+                        "ttl": 1,
+                        "type": "CNAME",
+                        "value": "fm3.josephvoss.com.dkim.fmhosted.com",
+                        "zoneId": "1dee01b2352a5b47fa244f4ac91beb3c"
+                    },
+                    "parent": "urn:pulumi:production::pulumi-cloudflare-josephvoss.com::pulumi:pulumi:Stack::pulumi-cloudflare-josephvoss.com-production",
+                    "provider": "urn:pulumi:production::pulumi-cloudflare-josephvoss.com::pulumi:providers:cloudflare::default::71243eb7-ce05-4ebd-91b4-d0ad68bfe6e8",
+                    "propertyDependencies": {
+                        "name": null,
+                        "ttl": null,
+                        "type": null,
+                        "value": null,
+                        "zoneId": null
+                    },
+                    "created": "2023-12-17T19:23:12.536968Z",
+                    "modified": "2023-12-17T19:23:12.536968Z"
+                },
+                {
+                    "urn": "urn:pulumi:production::pulumi-cloudflare-josephvoss.com::cloudflare:index/record:Record::fm2._domainkey.josephvoss.com",
+                    "custom": true,
+                    "id": "338cfc9785529ba66b400c3148de3037",
+                    "type": "cloudflare:index/record:Record",
+                    "inputs": {
+                        "__defaults": [
+                            "allowOverwrite"
+                        ],
+                        "allowOverwrite": false,
+                        "name": "fm2._domainkey",
+                        "ttl": 1,
+                        "type": "CNAME",
+                        "value": "fm2.josephvoss.com.dkim.fmhosted.com",
+                        "zoneId": "1dee01b2352a5b47fa244f4ac91beb3c"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":30000000000,\"update\":30000000000},\"schema_version\":\"2\"}",
+                        "comment": "",
+                        "createdOn": "2023-02-02T08:02:23.531335Z",
+                        "data": null,
+                        "hostname": "fm2._domainkey.josephvoss.com",
+                        "id": "338cfc9785529ba66b400c3148de3037",
+                        "metadata": {
+                            "auto_added": "false",
+                            "managed_by_apps": "false",
+                            "managed_by_argo_tunnel": "false",
+                            "source": "primary"
+                        },
+                        "modifiedOn": "2023-02-02T08:02:23.531335Z",
+                        "name": "fm2._domainkey",
+                        "proxiable": true,
+                        "proxied": false,
+                        "tags": [],
+                        "ttl": 1,
+                        "type": "CNAME",
+                        "value": "fm2.josephvoss.com.dkim.fmhosted.com",
+                        "zoneId": "1dee01b2352a5b47fa244f4ac91beb3c"
+                    },
+                    "parent": "urn:pulumi:production::pulumi-cloudflare-josephvoss.com::pulumi:pulumi:Stack::pulumi-cloudflare-josephvoss.com-production",
+                    "provider": "urn:pulumi:production::pulumi-cloudflare-josephvoss.com::pulumi:providers:cloudflare::default::71243eb7-ce05-4ebd-91b4-d0ad68bfe6e8",
+                    "propertyDependencies": {
+                        "name": null,
+                        "ttl": null,
+                        "type": null,
+                        "value": null,
+                        "zoneId": null
+                    },
+                    "created": "2023-12-17T19:23:11.788896Z",
+                    "modified": "2023-12-17T19:23:11.788896Z"
+                },
+                {
+                    "urn": "urn:pulumi:production::pulumi-cloudflare-josephvoss.com::cloudflare:index/record:Record::_acme-challenge.josephvoss.com_3",
+                    "custom": true,
+                    "id": "9eee24852f7f5435698c9e6ee50ba138",
+                    "type": "cloudflare:index/record:Record",
+                    "inputs": {
+                        "__defaults": [
+                            "allowOverwrite"
+                        ],
+                        "allowOverwrite": false,
+                        "name": "_acme-challenge",
+                        "ttl": 600,
+                        "type": "TXT",
+                        "value": "glnApuyf9U1Vf51jP3bLf9Ywbu1dwJ_8fNasu1C-zqA",
+                        "zoneId": "1dee01b2352a5b47fa244f4ac91beb3c"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":30000000000,\"update\":30000000000},\"schema_version\":\"2\"}",
+                        "comment": "",
+                        "createdOn": "2020-01-04T16:59:01.265677Z",
+                        "data": null,
+                        "hostname": "_acme-challenge.josephvoss.com",
+                        "id": "9eee24852f7f5435698c9e6ee50ba138",
+                        "metadata": {
+                            "auto_added": "false",
+                            "managed_by_apps": "false",
+                            "managed_by_argo_tunnel": "false",
+                            "source": "primary"
+                        },
+                        "modifiedOn": "2020-01-04T16:59:01.265677Z",
+                        "name": "_acme-challenge",
+                        "proxiable": false,
+                        "proxied": false,
+                        "tags": [],
+                        "ttl": 600,
+                        "type": "TXT",
+                        "value": "glnApuyf9U1Vf51jP3bLf9Ywbu1dwJ_8fNasu1C-zqA",
+                        "zoneId": "1dee01b2352a5b47fa244f4ac91beb3c"
+                    },
+                    "parent": "urn:pulumi:production::pulumi-cloudflare-josephvoss.com::pulumi:pulumi:Stack::pulumi-cloudflare-josephvoss.com-production",
+                    "provider": "urn:pulumi:production::pulumi-cloudflare-josephvoss.com::pulumi:providers:cloudflare::default::71243eb7-ce05-4ebd-91b4-d0ad68bfe6e8",
+                    "propertyDependencies": {
+                        "name": null,
+                        "ttl": null,
+                        "type": null,
+                        "value": null,
+                        "zoneId": null
+                    },
+                    "created": "2023-12-17T19:23:14.535813Z",
+                    "modified": "2023-12-17T19:23:14.535813Z"
+                },
+                {
+                    "urn": "urn:pulumi:production::pulumi-cloudflare-josephvoss.com::cloudflare:index/record:Record::_acme-challenge.josephvoss.com_2",
+                    "custom": true,
+                    "id": "6fe1b216fee54c1c466e8ab0a43d896d",
+                    "type": "cloudflare:index/record:Record",
+                    "inputs": {
+                        "__defaults": [
+                            "allowOverwrite"
+                        ],
+                        "allowOverwrite": false,
+                        "name": "_acme-challenge",
+                        "ttl": 600,
+                        "type": "TXT",
+                        "value": "gzv-noqThKdyKwkq1mXzUjAE1-qiuggxZcUxLF1I8fw",
+                        "zoneId": "1dee01b2352a5b47fa244f4ac91beb3c"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":30000000000,\"update\":30000000000},\"schema_version\":\"2\"}",
+                        "comment": "",
+                        "createdOn": "2020-01-04T16:59:01.27448Z",
+                        "data": null,
+                        "hostname": "_acme-challenge.josephvoss.com",
+                        "id": "6fe1b216fee54c1c466e8ab0a43d896d",
+                        "metadata": {
+                            "auto_added": "false",
+                            "managed_by_apps": "false",
+                            "managed_by_argo_tunnel": "false",
+                            "source": "primary"
+                        },
+                        "modifiedOn": "2020-01-04T16:59:01.27448Z",
+                        "name": "_acme-challenge",
+                        "proxiable": false,
+                        "proxied": false,
+                        "tags": [],
+                        "ttl": 600,
+                        "type": "TXT",
+                        "value": "gzv-noqThKdyKwkq1mXzUjAE1-qiuggxZcUxLF1I8fw",
+                        "zoneId": "1dee01b2352a5b47fa244f4ac91beb3c"
+                    },
+                    "parent": "urn:pulumi:production::pulumi-cloudflare-josephvoss.com::pulumi:pulumi:Stack::pulumi-cloudflare-josephvoss.com-production",
+                    "provider": "urn:pulumi:production::pulumi-cloudflare-josephvoss.com::pulumi:providers:cloudflare::default::71243eb7-ce05-4ebd-91b4-d0ad68bfe6e8",
+                    "propertyDependencies": {
+                        "name": null,
+                        "ttl": null,
+                        "type": null,
+                        "value": null,
+                        "zoneId": null
+                    },
+                    "created": "2023-12-17T19:23:13.539536Z",
+                    "modified": "2023-12-17T19:23:13.539536Z"
+                },
+                {
+                    "urn": "urn:pulumi:production::pulumi-cloudflare-josephvoss.com::cloudflare:index/record:Record::fm1._domainkey.josephvoss.com",
+                    "custom": true,
+                    "id": "185265157af0207841a158e3fba6dfb7",
+                    "type": "cloudflare:index/record:Record",
+                    "inputs": {
+                        "__defaults": [
+                            "allowOverwrite"
+                        ],
+                        "allowOverwrite": false,
+                        "name": "fm1._domainkey",
+                        "ttl": 1,
+                        "type": "CNAME",
+                        "value": "fm1.josephvoss.com.dkim.fmhosted.com",
+                        "zoneId": "1dee01b2352a5b47fa244f4ac91beb3c"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":30000000000,\"update\":30000000000},\"schema_version\":\"2\"}",
+                        "comment": "",
+                        "createdOn": "2023-02-02T08:02:00.979075Z",
+                        "data": null,
+                        "hostname": "fm1._domainkey.josephvoss.com",
+                        "id": "185265157af0207841a158e3fba6dfb7",
+                        "metadata": {
+                            "auto_added": "false",
+                            "managed_by_apps": "false",
+                            "managed_by_argo_tunnel": "false",
+                            "source": "primary"
+                        },
+                        "modifiedOn": "2023-02-02T08:02:00.979075Z",
+                        "name": "fm1._domainkey",
+                        "proxiable": true,
+                        "proxied": false,
+                        "tags": [],
+                        "ttl": 1,
+                        "type": "CNAME",
+                        "value": "fm1.josephvoss.com.dkim.fmhosted.com",
+                        "zoneId": "1dee01b2352a5b47fa244f4ac91beb3c"
+                    },
+                    "parent": "urn:pulumi:production::pulumi-cloudflare-josephvoss.com::pulumi:pulumi:Stack::pulumi-cloudflare-josephvoss.com-production",
+                    "provider": "urn:pulumi:production::pulumi-cloudflare-josephvoss.com::pulumi:providers:cloudflare::default::71243eb7-ce05-4ebd-91b4-d0ad68bfe6e8",
+                    "propertyDependencies": {
+                        "name": null,
+                        "ttl": null,
+                        "type": null,
+                        "value": null,
+                        "zoneId": null
+                    },
+                    "created": "2023-12-17T19:23:12.032213Z",
+                    "modified": "2023-12-17T19:23:12.032213Z"
+                },
+                {
+                    "urn": "urn:pulumi:production::pulumi-cloudflare-josephvoss.com::cloudflare:index/record:Record::_acme-challenge.josephvoss.com_4",
+                    "custom": true,
+                    "id": "83fa30cf1bde7c53bf7b2e5e7e16ab3b",
+                    "type": "cloudflare:index/record:Record",
+                    "inputs": {
+                        "__defaults": [
+                            "allowOverwrite"
+                        ],
+                        "allowOverwrite": false,
+                        "name": "_acme-challenge",
+                        "ttl": 600,
+                        "type": "TXT",
+                        "value": "7bel3iXiWrg8ZQc_9flzphlidhfu1qSemk95FeCWwKI",
+                        "zoneId": "1dee01b2352a5b47fa244f4ac91beb3c"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":30000000000,\"update\":30000000000},\"schema_version\":\"2\"}",
+                        "comment": "",
+                        "createdOn": "2020-01-04T16:59:01.25024Z",
+                        "data": null,
+                        "hostname": "_acme-challenge.josephvoss.com",
+                        "id": "83fa30cf1bde7c53bf7b2e5e7e16ab3b",
+                        "metadata": {
+                            "auto_added": "false",
+                            "managed_by_apps": "false",
+                            "managed_by_argo_tunnel": "false",
+                            "source": "primary"
+                        },
+                        "modifiedOn": "2020-01-04T16:59:01.25024Z",
+                        "name": "_acme-challenge",
+                        "proxiable": false,
+                        "proxied": false,
+                        "tags": [],
+                        "ttl": 600,
+                        "type": "TXT",
+                        "value": "7bel3iXiWrg8ZQc_9flzphlidhfu1qSemk95FeCWwKI",
+                        "zoneId": "1dee01b2352a5b47fa244f4ac91beb3c"
+                    },
+                    "parent": "urn:pulumi:production::pulumi-cloudflare-josephvoss.com::pulumi:pulumi:Stack::pulumi-cloudflare-josephvoss.com-production",
+                    "provider": "urn:pulumi:production::pulumi-cloudflare-josephvoss.com::pulumi:providers:cloudflare::default::71243eb7-ce05-4ebd-91b4-d0ad68bfe6e8",
+                    "propertyDependencies": {
+                        "name": null,
+                        "ttl": null,
+                        "type": null,
+                        "value": null,
+                        "zoneId": null
+                    },
+                    "created": "2023-12-17T19:23:14.275451Z",
+                    "modified": "2023-12-17T19:23:14.275451Z"
+                },
+                {
+                    "urn": "urn:pulumi:production::pulumi-cloudflare-josephvoss.com::cloudflare:index/record:Record::_acme-challenge.josephvoss.com",
+                    "custom": true,
+                    "id": "bfd670c3db8941020e05e78e2f03644c",
+                    "type": "cloudflare:index/record:Record",
+                    "inputs": {
+                        "__defaults": [
+                            "allowOverwrite"
+                        ],
+                        "allowOverwrite": false,
+                        "name": "_acme-challenge",
+                        "ttl": 600,
+                        "type": "TXT",
+                        "value": "lhF_w0qlcmnmyOlfegknvZ_k7aTn3w9oZOd5Jj7O4X8",
+                        "zoneId": "1dee01b2352a5b47fa244f4ac91beb3c"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":30000000000,\"update\":30000000000},\"schema_version\":\"2\"}",
+                        "comment": "",
+                        "createdOn": "2020-01-04T16:59:01.290612Z",
+                        "data": null,
+                        "hostname": "_acme-challenge.josephvoss.com",
+                        "id": "bfd670c3db8941020e05e78e2f03644c",
+                        "metadata": {
+                            "auto_added": "false",
+                            "managed_by_apps": "false",
+                            "managed_by_argo_tunnel": "false",
+                            "source": "primary"
+                        },
+                        "modifiedOn": "2020-01-04T16:59:01.290612Z",
+                        "name": "_acme-challenge",
+                        "proxiable": false,
+                        "proxied": false,
+                        "tags": [],
+                        "ttl": 600,
+                        "type": "TXT",
+                        "value": "lhF_w0qlcmnmyOlfegknvZ_k7aTn3w9oZOd5Jj7O4X8",
+                        "zoneId": "1dee01b2352a5b47fa244f4ac91beb3c"
+                    },
+                    "parent": "urn:pulumi:production::pulumi-cloudflare-josephvoss.com::pulumi:pulumi:Stack::pulumi-cloudflare-josephvoss.com-production",
+                    "provider": "urn:pulumi:production::pulumi-cloudflare-josephvoss.com::pulumi:providers:cloudflare::default::71243eb7-ce05-4ebd-91b4-d0ad68bfe6e8",
+                    "propertyDependencies": {
+                        "name": null,
+                        "ttl": null,
+                        "type": null,
+                        "value": null,
+                        "zoneId": null
+                    },
+                    "created": "2023-12-17T19:23:13.283495Z",
+                    "modified": "2023-12-17T19:23:13.283495Z"
+                },
+                {
+                    "urn": "urn:pulumi:production::pulumi-cloudflare-josephvoss.com::cloudflare:index/record:Record::_acme-challenge.josephvoss.com_1",
+                    "custom": true,
+                    "id": "edeeebef3383e57e9d47be9a6f9cead1",
+                    "type": "cloudflare:index/record:Record",
+                    "inputs": {
+                        "__defaults": [
+                            "allowOverwrite"
+                        ],
+                        "allowOverwrite": false,
+                        "name": "_acme-challenge",
+                        "ttl": 600,
+                        "type": "TXT",
+                        "value": "kIOq8tcuEDrT1_T30bDopWNZ_DZZKsO3GQhv-4P3_6k",
+                        "zoneId": "1dee01b2352a5b47fa244f4ac91beb3c"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":30000000000,\"update\":30000000000},\"schema_version\":\"2\"}",
+                        "comment": "",
+                        "createdOn": "2020-01-04T16:59:01.283007Z",
+                        "data": null,
+                        "hostname": "_acme-challenge.josephvoss.com",
+                        "id": "edeeebef3383e57e9d47be9a6f9cead1",
+                        "metadata": {
+                            "auto_added": "false",
+                            "managed_by_apps": "false",
+                            "managed_by_argo_tunnel": "false",
+                            "source": "primary"
+                        },
+                        "modifiedOn": "2020-01-04T16:59:01.283007Z",
+                        "name": "_acme-challenge",
+                        "proxiable": false,
+                        "proxied": false,
+                        "tags": [],
+                        "ttl": 600,
+                        "type": "TXT",
+                        "value": "kIOq8tcuEDrT1_T30bDopWNZ_DZZKsO3GQhv-4P3_6k",
+                        "zoneId": "1dee01b2352a5b47fa244f4ac91beb3c"
+                    },
+                    "parent": "urn:pulumi:production::pulumi-cloudflare-josephvoss.com::pulumi:pulumi:Stack::pulumi-cloudflare-josephvoss.com-production",
+                    "provider": "urn:pulumi:production::pulumi-cloudflare-josephvoss.com::pulumi:providers:cloudflare::default::71243eb7-ce05-4ebd-91b4-d0ad68bfe6e8",
+                    "propertyDependencies": {
+                        "name": null,
+                        "ttl": null,
+                        "type": null,
+                        "value": null,
+                        "zoneId": null
+                    },
+                    "created": "2023-12-17T19:23:14.039806Z",
+                    "modified": "2023-12-17T19:23:14.039806Z"
+                }
+            ]
+        }
+    }
+}
