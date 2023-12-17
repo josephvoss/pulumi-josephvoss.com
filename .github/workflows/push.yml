@@ -22,4 +22,4 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Update pulumi state dir
-          file_pattern: state/*
+          file_pattern: .pulumi/*
