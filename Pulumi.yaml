@@ -1,0 +1,136 @@
+name: pulumi-cloudflare-josephvoss.com
+runtime: yaml
+description: Personal domain DNS settings
+variables:
+  cloudflare_zone_id: 1dee01b2352a5b47fa244f4ac91beb3c
+  domain_name: josephvoss.com
+outputs: {}
+resources:
+  www:
+    type: cloudflare:Record
+    properties:
+      name: www.${domain_name}
+      zoneId: ${cloudflare_zone_id}
+      type: CNAME
+      ttl: 3600
+      value: ${domain_name}
+      proxied: true
+  cf_pages_cname:
+    type: cloudflare:Record
+    properties:
+      name: ${domain_name}
+      zoneId: ${cloudflare_zone_id}
+      type: CNAME
+      ttl: 1
+      value: website-source-ads.pages.dev
+      proxied: true
+  fastmail_mx_2:
+    type: cloudflare:Record
+    properties:
+      name: ${domain_name}
+      priority: 20
+      proxied: false
+      ttl: 1800
+      type: "MX"
+      value: "in2-smtp.messagingengine.com"
+      zoneId: ${cloudflare_zone_id}
+  fastmail_mx_1:
+    type: cloudflare:Record
+    properties:
+      name: ${domain_name}
+      priority: 10
+      proxied: false
+      ttl: 1800
+      type: "MX"
+      value: "in1-smtp.messagingengine.com"
+      zoneId: ${cloudflare_zone_id}
+  fastmail_dkims_1:
+    type: cloudflare:Record
+    properties:
+      name: "fm1._domainkey"
+      proxied: true
+      ttl: 1
+      type: "CNAME"
+      value: "fm1.josephvoss.com.dkim.fmhosted.com"
+      zoneId: ${cloudflare_zone_id}
+  fastmail_dkims_2:
+    type: cloudflare:Record
+    properties:
+      name: "fm2._domainkey"
+      proxied: true
+      ttl: 1
+      type: "CNAME"
+      value: "fm2.josephvoss.com.dkim.fmhosted.com"
+      zoneId: ${cloudflare_zone_id}
+  fastmail_dkims_3:
+    type: cloudflare:Record
+    properties:
+      name: "fm3._domainkey"
+      proxied: true
+      ttl: 1
+      type: "CNAME"
+      value: "fm3.josephvoss.com.dkim.fmhosted.com"
+      zoneId: ${cloudflare_zone_id}
+  _acme_challenge_1:
+    type: cloudflare:Record
+    properties:
+      name: "_acme-challenge"
+      proxied: false
+      ttl: 600
+      type: "TXT"
+      value: "lhF_w0qlcmnmyOlfegknvZ_k7aTn3w9oZOd5Jj7O4X8"
+      zoneId: ${cloudflare_zone_id}
+  _acme_challenge_2:
+    type: cloudflare:Record
+    properties:
+      name: "_acme-challenge"
+      proxied: false
+      ttl: 600
+      type: "TXT"
+      value: "kIOq8tcuEDrT1_T30bDopWNZ_DZZKsO3GQhv-4P3_6k"
+      zoneId: ${cloudflare_zone_id}
+  _acme_challenge_3:
+    type: cloudflare:Record
+    properties:
+      name: "_acme-challenge"
+      proxied: false
+      ttl: 600
+      type: "TXT"
+      value: "gzv-noqThKdyKwkq1mXzUjAE1-qiuggxZcUxLF1I8fw"
+      zoneId: ${cloudflare_zone_id}
+  _acme_challenge_4:
+    type: cloudflare:Record
+    properties:
+      name: "_acme-challenge"
+      proxied: false
+      ttl: 600
+      type: "TXT"
+      value: "glnApuyf9U1Vf51jP3bLf9Ywbu1dwJ_8fNasu1C-zqA"
+      zoneId: ${cloudflare_zone_id}
+  _acme_challenge_5:
+    type: cloudflare:Record
+    properties:
+      name: "_acme-challenge"
+      proxied: false
+      ttl: 600
+      type: "TXT"
+      value: "7bel3iXiWrg8ZQc_9flzphlidhfu1qSemk95FeCWwKI"
+      zoneId: ${cloudflare_zone_id}
+  google_site_verification:
+    type: cloudflare:Record
+    properties:
+      name: ${domain_name}
+      proxied: false
+      ttl: 1
+      type: "TXT"
+      value: "google-site-verification=KHxkchE6EFBqY55Vz1rALcMuOy7hjk0q7dbxcPLx1wI"
+      zoneId: ${cloudflare_zone_id}
+  spf:
+    type: cloudflare:Record
+    properties:
+      name: ${domain_name}
+      proxied: false
+      ttl: 1800
+      type: "TXT"
+      zoneId: ${cloudflare_zone_id}
+      value: "v=spf1 include:spf.messagingengine.com ?all"
