@@ -17,7 +17,6 @@ jobs:
           stack-name: production
           cloud-url: file://state
         env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
